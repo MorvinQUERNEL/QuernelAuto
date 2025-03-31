@@ -1,0 +1,97 @@
+.presentation {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../img/img-audi-a7.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  .presentation-content {
+    max-width: 800px;
+    text-align: center;
+    color: white;
+
+    .presentation-header {
+      margin-bottom: 2rem;
+
+      .presentation-logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        color: #FD7E23;
+        margin: 0;
+      }
+    }
+
+    .presentation-text {
+      margin-bottom: 3rem;
+      line-height: 1.6;
+
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+      }
+    }
+
+    .cta-button {
+      background-color: #FD7E23;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #ff9f5b;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(253, 126, 35, 0.3);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .presentation-header {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .presentation-text {
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .cta-button {
+      padding: 0.8rem 1.6rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    padding: 1rem;
+
+    .presentation-header {
+      .presentation-logo {
+        width: 80px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+} 

@@ -1,0 +1,171 @@
+.etapes {
+  padding: 2rem 1rem;
+  background-color: #000000;
+
+  .etapes-titre {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: #FD7E23;
+    }
+  }
+
+  .etapes-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .etape-card {
+      display: flex;
+      flex-direction: row;
+      height: 150px;
+      background: black;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+
+        .etape-image {
+          transform: scale(1.1);
+        }
+      }
+
+      .etape-image-container {
+        width: 40%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .etape-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .etape-numero {
+          width: 30px;
+          height: 30px;
+          font-size: 1rem;
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          background-color: #FD7E23;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .etape-content {
+        width: 60%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+          color: #FD7E23;
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          color: #ffffff;
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 3rem 1.5rem;
+
+    .etapes-titre {
+      font-size: 2rem;
+    }
+
+    .etapes-container {
+      grid-template-columns: repeat(2, 1fr);
+
+      .etape-card {
+        flex-direction: column;
+        height: auto;
+
+        .etape-image-container {
+          width: 100%;
+          height: 200px;
+
+          .etape-numero {
+            width: 35px;
+            height: 35px;
+            font-size: 1.1rem;
+          }
+        }
+
+        .etape-content {
+          width: 100%;
+          padding: 1.5rem;
+
+          h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 4rem 2rem;
+
+    .etapes-titre {
+      font-size: 2.5rem;
+    }
+
+    .etapes-container {
+      grid-template-columns: repeat(4, 1fr);
+
+      .etape-card {
+        .etape-image-container {
+          .etape-numero {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+          }
+        }
+
+        .etape-content {
+          h3 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+} 
